@@ -68,3 +68,29 @@ Deno.test("format an address for a given objectId", () => {
 
   assertEquals(formattedAddress(data), "Adresse: Im Schwanenbusch 25, 45145 Essen");
 });
+
+
+
+Deno.test("group data nested by 2 properties", () => {
+  const data = [
+    { customer: "Nike", project: "sneaker", hours: 509 },
+    { customer: "Nike", project: "sportswear", hours: 2012 },
+    { customer: "Puma", project: "hats", hours: 30 },
+    { customer: "Puma", project: "sneaker", hours: 233 },
+  ]
+
+  const hoursByCustomerAndProject = (reports) => {
+    // implement
+  }
+
+  assertEquals(hoursByCustomerAndProject(data), {
+    Nike: {
+      sneaker: 509,
+      sportswear: 2012
+    },
+    Puma: {
+      hats: 30,
+      sneaker: 233
+    }
+  });
+});
