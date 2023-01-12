@@ -62,11 +62,11 @@ Deno.test("format an address for a given objectId", () => {
     ]
   }
 
-  const formattedAddress = (objectId) => {
+  const formattedAddress = (data, objectId) => {
     // implement using a reduce statement
   }
 
-  assertEquals(formattedAddress(data), "Adresse: Im Schwanenbusch 25, 45145 Essen");
+  assertEquals(formattedAddress(data, 5), "Adresse: Im Schwanenbusch 25, 45145 Essen");
 });
 
 
